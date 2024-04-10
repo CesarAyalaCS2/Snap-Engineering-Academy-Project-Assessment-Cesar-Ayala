@@ -5,32 +5,27 @@
     <title>Liga MX Apertura 2019</title>
     <meta name="description" content="A Catalog of Shows Set in Los Angeles">
     <link rel="stylesheet" href="style.css" />
+    <link href="https://fonts.googleapis.com/css2?family=Anton&display=swap" rel="stylesheet">
 </head>
 
 <body>
     <header class="main-header">
         <h1 class="title">Liga MX Apertura 2019</h1>
-        <h2>Resumen</h2>
     </header>
-    <div id="cardContainer"></div>
+    <div id="cardContainer">
     <div class="card" style="display: none;">
-        <div class="card-content">
-            <h2>CARD CONTENT!</h2>
-            <img src="" alt="MATCH POSTER">
-            <ul>
-                <li>Bullet Point 1</li>
-                <li>Bullet Point 2</li>
-                <li>Bullet Point 3</li>
-            </ul>
-        </div>
-    </div>
+        
+    </div>`
+</div>
+
     <div class="navigation">
         <button onclick="showPreviousMatch()">Previous Match</button>
-        <button onclick="showNextMatch()">Next Match</button>
+        
         <select id="matchSelector" onchange="showSelectedMatch()">
             <option value="">Select a Match</option>
             <!-- Options will be populated dynamically with JavaScript -->
         </select>
+        <button onclick="showNextMatch()">Next Match</button>
     </div>
     <div class="footer">
         <button onclick="quoteAlert();">
@@ -39,6 +34,15 @@
         <button onclick="deleteCard();">
             Remove A Card!
         </button>
+        <button onclick="filterMatchesByRound()">Filter by Round
+        </button>
+        <select id="roundFilter">
+            <option value="">All Rounds</option>
+            <option value="Round 1">Round 1</option>
+            <option value="Round 2">Round 2</option>
+            <!-- Add more options as needed -->
+        </select>
+
         <!-- <button> REMOVES THE FIRST CHILD!!!!!</button>
         <button> ADDS POST GAME MATCH CARD </button>
         <button>FILTER BY TEAM</button>
