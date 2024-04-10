@@ -2,23 +2,21 @@
 <html>
 
 <head>
-    <title>LA TV Shows | Home</title>
+    <title>Liga MX Apertura 2019</title>
     <meta name="description" content="A Catalog of Shows Set in Los Angeles">
     <link rel="stylesheet" href="style.css" />
-    <script type="text/javascript" src="scripts.js"></script>
 </head>
 
 <body>
     <header class="main-header">
-        <h1 class="title">LA TV Shows</h1>
+        <h1 class="title">Liga MX Apertura 2019</h1>
+        <h2>Resumen</h2>
     </header>
-    <div id="card-container">
-        
-    </div>
+    <div id="cardContainer"></div>
     <div class="card" style="display: none;">
         <div class="card-content">
-            <h2>TV Show Title</h2>
-            <img src="" alt="TV Show Poster">
+            <h2>CARD CONTENT!</h2>
+            <img src="" alt="MATCH POSTER">
             <ul>
                 <li>Bullet Point 1</li>
                 <li>Bullet Point 2</li>
@@ -26,14 +24,27 @@
             </ul>
         </div>
     </div>
+    <div class="navigation">
+        <button onclick="showPreviousMatch()">Previous Match</button>
+        <button onclick="showNextMatch()">Next Match</button>
+        <select id="matchSelector" onchange="showSelectedMatch()">
+            <option value="">Select a Match</option>
+            <!-- Options will be populated dynamically with JavaScript -->
+        </select>
+    </div>
     <div class="footer">
         <button onclick="quoteAlert();">
-            Get A Quote!
+            Animo!
         </button>
-        <button onclick="removeLastCard();">
+        <button onclick="deleteCard();">
             Remove A Card!
         </button>
+        <!-- <button> REMOVES THE FIRST CHILD!!!!!</button>
+        <button> ADDS POST GAME MATCH CARD </button>
+        <button>FILTER BY TEAM</button>
+        <button>FILTER BY ROUNDS</button> -->
     </div>
+    <script type="text/javascript" src="index.js"></script>
 </body>
 
 </html>
